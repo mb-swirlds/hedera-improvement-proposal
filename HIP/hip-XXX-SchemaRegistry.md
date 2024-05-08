@@ -46,6 +46,19 @@ _The rationale fleshes out the specification by describing why particular design
 _The rationale should provide evidence of consensus within the community and discuss important objections or concerns raised during the discussion._
 
 ---
+Below are the rationales based on a few key points we considered when designing the Schema Registry Native Service:
+
+### General Schema Registry Design
+Schema Registries are widely used on many software platforms, most notably in data ingestion platforms like Kafka. Confluent, has a Schema Registry that is widely used in the industry. It is open source and is a primary influence to the design of this service. Utilising their design and adding in the ability to store the Schemas on a DLT for provenance and immutability is a key feature of this service and would allow the service in some form to be integrated into the Confluent platform as an adaptor for the schema registry service they provide.
+
+By using the basis of their architecture we can ensure that the service is widely adopted and understood by the community. The code for schema validation and storage is already widely available and can be used as a basis for the Hedera Schema Registry. There are many tools that utilise the basic Avro schema format that Confluent has adopted for their JSON messages. These tools would allow the schemas stored in the Hedera Schema Registry to be used in many other systems with very little developer uplift on our side.
+
+### Schema Formats
+To begin with we would adopt the Avro format as the basis of the registry to allow JSON messages to be validated easily and efficiently within our native services and also in other systems that use Avro. This would allow us to have a very low barrier to entry for developers to start using the service.
+
+Moving forward there is nothing to stop us desiging a heterogenous schema registry that can store many different types of schema formats. This would allow us to store Avro, Protobuf, XML, JSON Schema, and many other formats in the same registry. This would allow us to be more flexible in the future and allow us to store any type of schema that a developer would want to use.
+
+Also adapting this to use ontologies or data dictionaries used in other industries like ESG and Payments industries is easily done as we expand the reach and capabilities of the service.
 
 
 ## User stories
