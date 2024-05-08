@@ -2,14 +2,14 @@
 hip: <HIP number (assigned by the HIP editor), usually the PR number>
 title: Schema Registry Native Service
 author: Michael Bennett <michael@strukt.org>, Justin Atwell <justin.atwell@swirldslabs.com>
-working-group: <List of the technical and business stakeholders' names and/or usernames, or names and emails. Ex: John Doe <@johnDoeGithub1778>, Jane Smith <jane@email.com>>
+working-group: ???
 requested-by: ???
 type: <"Standards Track" | "Informational" | "Process">
 category: Service
 needs-council-approval: Yes
 status: Draft
 created: 2024-05-08
-discussions-to: <A URL pointing to the official discussion thread. Ex: https://github.com/hashgraph/hedera-improvement-proposal/discussions/xxx.>
+discussions-to: ??? (URL to the discussion thread)
 updated: <Latest date HIP was updated, in YYYY-MM-DD format.>
 requires: n/a
 replaces: n/a
